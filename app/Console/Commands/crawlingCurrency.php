@@ -21,6 +21,8 @@ class crawlingCurrency extends Command
      */
     protected $description = 'Get currency data from external source.';
 
+    protected $currencyController;
+
     public function __construct(CurrencyController $CurrencyController)
     {
         parent::__construct();

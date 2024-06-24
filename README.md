@@ -12,10 +12,6 @@ Este projeto Laravel utiliza um controller para realizar crawling na Wikipedia e
 
 1. **Clone o repositório:**
 
-   ```bash
-   git clone https://github.com/seu-usuario/seu-projeto.git
-   cd seu-projeto
-
 2. **Instale as dependências do Composer::**
 
    ```bash
@@ -45,12 +41,32 @@ Este projeto Laravel utiliza um controller para realizar crawling na Wikipedia e
 
   **Parâmetros:**
   
-  - `code`: Pode ser um número ou uma string contendo um ou mais códigos separados por vírgula. Exemplo: `784` ou `784,BRL`.
+  - `code`: Pode ser um número ou uma string contendo um ou mais códigos separados por vírgula
 
   **Exemplo de Uso:**
 
   ```bash
   curl http://localhost:8000/currency/784
-  curl http://localhost:8000/currency/784,971
+
   php artisan crawl:currency 974,brl,971
+
+## Road map
+
+1. **Implementação dos tratamentos de erro**
+
+    Alguns erros já estão sendo tratados, mas a alguns para melhorar a qualidade do codigo como, por exemplo, o codigo não estar no padrão ISO 4217
+
+2. **Implementar Redis e Mysql**
+
+    O Redis ira evitar que requisições iguais sejam processadas novamente num periodo de tempo, assim deixando a aplicação melhor, e guardar algumas informações no banco de dados para melhorara ainda mais a aplicação
+
+3. **Teste Unitarios**
+
+    Essencial para garantir a qualidade e funcionalidade do codigo
+
+4. **Docker**
+
+    Não tenho muita experiencia em realizar a criação de containers, mas pretendo realizar o quanto antes.
+    
+
   
